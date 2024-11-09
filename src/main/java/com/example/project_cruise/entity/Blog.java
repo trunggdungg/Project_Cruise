@@ -32,9 +32,9 @@ public class Blog {
 
     String thumbnail;
     Boolean status;
-    LocalDateTime created_at;
-    LocalDateTime updated_at;
-    LocalDateTime published_at;
+    LocalDateTime createdAt;
+    LocalDateTime updatedAt;
+    LocalDateTime publishedAt;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

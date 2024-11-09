@@ -1,0 +1,17 @@
+.nav-blog {
+    /*position: -webkit-sticky; !* Đảm bảo hỗ trợ trên Safari *!*/
+    position: sticky;         /* Sử dụng sticky để dính khi cuộn */
+    top: 98px;                   /* Cách đỉnh 0px */
+    z-index: 1000;            /* Đảm bảo thanh nav nằm trên các nội dung khác */
+    background-color: white;  /* Đặt màu nền để không bị che khuất khi cuộn */
+}
+.tab-content {
+    display: none; /* Ẩn tất cả các tab */
+}
+
+.tab-content.active {
+    display: block; /* Chỉ hiển thị tab đang active */
+}
+.card-blogs{
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, .06), 0px 1px 3px 0px rgba(16, 24, 40, .1) !important;
+}

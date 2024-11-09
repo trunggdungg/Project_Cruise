@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+</head>
+
+<body>
+<div id="header"></div>
+<div th:insert="~{/fragment/header}"  style=" position: sticky;
+  z-index: 20;
+  top: 0;
+  background-color: white;"></div>
+
+
+
+<section>
+    <div class="chi-tiet-du-thuyen">
+        <div class="breadcrumb-item container" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#"><i class="fas fa-home"></i></a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#" style="text-decoration: none;">Blogs</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    <a href="#" style="text-decoration: none;">Du thuyền Indochine</a>
+                </li>
+            </ol>
+        </div>
+        <hr class="separator">
+        <div class="container">
+            <div class="intro blog-detail">
+                <div class="row ">
+                    <div class="col-md-12">
+                        <div class="special2">
+                            <h4 class="h4-specail">5 món ăn không thể bỏ lỡ khi du lịch Phú Quốc</h4>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-light text-dark">13/10/2024</span>
+
+                            </div>
+                            <div>
+                                <img src="/assets/image/heading-border.webp" alt="">
+                            </div>
+                            <!--  -->
+                            <div class="intro-detail">
+
+
+                                <p class="intro-text">Du thuyền Le Theatre được hạ thủy năm 2019 bao gồm 21 cabin
+                                    với phong
+                                    cách sang trọng. Những chi tiết trong thiết kế vô cùng tinh xảo sẽ đem đến sự
+                                    hài lòng
+                                    của mỗi du khách. Khu vực chung của du thuyền như: sảnh chính, nhà hàng, boong
+                                    tàu đều
+                                    khá rộng rãi, rất phù hợp cho nhiều đoàn đu khách.</p>
+                                <div class="intro-img">
+                                    <img src="https://minio.fares.vn/mixivivu-dev/tour/le-theatre-cruises/blog/6kz6zzkrsv0l9p96.jpg"
+                                         alt="">
+                                </div>
+                                <p class="intro-text">Trải nghiệm chèo thuyền Kayak đã bao gồm trong chương trình
+                                    hoặc tự do
+                                    bơi lội tại khu vực Ao Ếch thuộc vịnh Lan Hạ. Kết thúc các hoạt động cũng là
+                                    khoảng thời
+                                    gian tuyệt vời trong ngày để ngắm hoàng hôn, Quý khách lên tầng thượng nơi có
+                                    quầy bar
+                                    và bể vầy xinh đẹp, ngắm cảnh, chụp hình, trò chuyện, làm quen với những người
+                                    bạn mới,
+                                    cùng thưởng thức cafe, trà chiều miễn phí.</p>
+                                <div class="intro-img">
+                                    <img src="https://minio.fares.vn/mixivivu-dev/tour/le-theatre-cruises/blog/cemuf2qhnewqqzoc.jpg"
+                                         alt="">
+                                </div>
+                                <p class="intro-text">Nhà hàng Le Opera phục vụ bữa ăn hảo hạng quốc tế cùng với ẩm
+                                    thực
+                                    Việt Nam đích thực mang đến trải nghiệm ẩm thực không thể bắt chước.</p>
+                                <div class="intro-img">
+                                    <img src="https://minio.fares.vn/mixivivu-dev/tour/le-theatre-cruises/blog/qkamyt9xqu39g1wh.jpg"
+                                         alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+
+
+
+
+<div id="footer"></div>
+<div th:insert="~{/fragment/footer}"></div>
+</body>
+
+</html>

@@ -18,6 +18,8 @@ public class Location {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
     String routeName;
+    String locationName;
     String address;
     String city;
+
 }

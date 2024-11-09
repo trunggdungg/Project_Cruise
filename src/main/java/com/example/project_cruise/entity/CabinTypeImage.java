@@ -21,7 +21,7 @@ public class CabinTypeImage {
     Integer id;
     String type;
     String urlImage;
-    LocalDateTime created_at;
+    LocalDateTime createdAt;
 
     @ManyToOne
     @JoinColumn(name = "cabin_type_id")

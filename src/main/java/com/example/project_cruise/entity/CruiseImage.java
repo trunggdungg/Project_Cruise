@@ -21,7 +21,7 @@ public class CruiseImage {
     Integer id;
     String urlImage;
     String type;
-    LocalDateTime created_at;
+    LocalDateTime createdAt;
 
     @ManyToOne
     @JoinColumn(name = "cruise_id")

@@ -1,0 +1,297 @@
+.tim-du-thuyen .card-body {
+    border-radius: 32px;
+    border: 1px solid #eaecf0;
+    background:  #fff;
+    box-shadow: var(--shadow-sm);
+
+}
+
+.tim-du-thuyen {
+    padding: 80px 32px !important;
+    margin: 0px 87.5px;
+}
+
+.sect-bg {
+    background-image: url(../../web-assets/image/section-background.png);
+}
+
+.tim-du-thuyen .shadow-sm,
+.border-list-tag {
+    border: none;
+    border-radius: 32px;
+}
+
+.tim-du-thuyen .btn-search {
+    background-color: #77DADA;
+
+}
+
+.tim-du-thuyen .btn-search:active {
+
+    background-color: #0e4f4f !important;
+    color: #fff !important;
+    /* Đảm bảo màu chữ trắng khi click */
+
+}
+
+.tim-du-thuyen .btn-search:hover {
+    background-color: #1c6c6c;
+    color: #fff;
+    cursor: pointer;
+    fill: #fff;
+}
+
+.tim-du-thuyen .btn-outline-secondary:active {
+    background-color: white !important;
+    color: #6c757d !important;
+    border: 1px solid #77DADA !important;
+}
+
+.tim-du-thuyen .btn-outline-secondary:hover {
+    cursor: default;
+}
+
+.tim-du-thuyen h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #101828;
+}
+
+.tim-du-thuyen .card-body p {
+    font-size: 18px;
+    line-height: 28px;
+    color:  #101828;
+}
+
+.tim-du-thuyen .custom-height {
+    height: 58px;
+}
+
+.tim-du-thuyen .btn-outline-secondary {
+    background-color: white !important;
+    color: #6c757d !important;
+    border: 1px solid #dee2e6 !important;
+}
+
+.div-img{
+    width: 370.02px !important;
+    height: 237.55px;
+}
+
+.tim-du-thuyen .btn-outline-secondary:hover {
+    background-color: white;
+    color: #6c757d;
+}
+
+.tim-du-thuyen .input-search:focus {
+    border-color: #77DADA;
+
+}
+
+/* menu con */
+
+
+/* Các CSS giữ màu của nút khi dropdown mở */
+.btn-outline-secondary.dropdown-toggle:focus-within {
+    box-shadow: 0 0 0 4px #caf8f8;
+    background-color: white;
+    color: #6c757d;
+}
+
+
+/* nút search */
+.position-relative {
+    position: relative;
+}
+
+.search-icon-left {
+    position: absolute;
+    left: 15px;
+    /* Điều chỉnh khoảng cách icon bên trái */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+    /* Màu icon */
+    pointer-events: none;
+}
+
+.custom-height {
+    height: 58px;
+    /* Chiều cao của input */
+}
+
+.form-control {
+    padding-left: 40px;
+    /* Tạo khoảng trống cho icon */
+    border-radius: 50px;
+    border: 1px solid #d9d9d9;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+.d-flex .btn {
+    height: 58px;
+    /* Đảm bảo các nút có cùng chiều cao với input */
+    border-radius: 50px;
+}
+
+
+/* result search */
+
+.tim-du-thuyen .text-reult-search {
+    font-size: 36px;
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+}
+
+.card.border-list-tag {
+    border-radius: 32px;
+    border: 1px solid  #eaecf0;
+    background:  #fff;
+    box-shadow: var(--shadow-sm);
+    --shadow-sm: 0px 1px 2px 0px rgba(16, 24, 40, .06), 0px 1px 3px 0px rgba(16, 24, 40, .1);
+}
+
+.tim-du-thuyen .card-info-du-thuyen {
+    border: none;
+    margin-left: 22px;
+    padding: 0 16px 0 16px !important;
+}
+
+.bg-warning {
+    --bs-bg-opacity: 1;
+    background-color: #FEDF89;
+}
+
+.tim-du-thuyen .card-info-du-thuyen .card-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.tim-du-thuyen .card-img {
+    border-radius: 32px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tim-du-thuyen .icon-rating {
+    margin-left: 30px !important;
+}
+
+.card-img {
+    width: 100%;
+    height: 264px;
+
+    object-fit: cover;
+}
+
+.zoom-img {
+    transition: transform 0.3s ease;
+    backface-visibility: hidden;
+    /* Giúp hình ảnh giữ nét khi zoom */
+    will-change: transform;
+    /* Cải thiện hiệu suất cho hiệu ứng zoom */
+}
+
+.zoom-img:hover {
+    transform: scale(1.01);
+    /* Tăng kích thước ảnh lên 10% khi hover */
+}
+
+/* checkboxx */
+.form-check-input {
+    display: none;
+    /* Ẩn checkbox mặc định */
+}
+
+.form-check-label {
+    position: relative;
+    padding-left: 25px;
+    /* Khoảng cách cho dấu tích */
+    cursor: pointer;
+}
+
+/* Tạo dấu tích tùy chỉnh */
+.form-check-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    /* Kích thước của checkbox tùy chỉnh */
+    height: 18px;
+    border: 1px solid  #0e4f4f;
+    background: white;
+    /* Màu nền mặc định */
+    border-radius: 5px;
+    /* Bo góc */
+}
+
+/* Dấu tích khi checkbox được checked */
+.form-check-input:checked+.form-check-label::before {
+    background: #77dada;
+    /* Màu nền khi được checked */
+    border-color: #77dada;
+    /* Màu viền khi được checked */
+}
+
+/* Khi hover vào label */
+.form-check-label:hover::before {
+    border-color:  #0e4f4f;
+    background:  #77dada;
+}
+
+/* Hiển thị dấu tích */
+.form-check-input:checked+.form-check-label::after {
+    content: "✔";
+    /* Dấu tích */
+    position: absolute;
+    left: 0px;
+    /* Vị trí dấu tích */
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    /* Màu dấu tích */
+}
+
+
+/* nút menu con*/
+/* Tăng độ rộng của các thẻ <li> trong dropdown */
+.dropdown-menu .dropdown-item {
+    min-width: 200px;
+    /* Thay đổi giá trị này để tăng/giảm độ rộng */
+    white-space: nowrap;
+    /* Đảm bảo text không xuống dòng */
+    height: 50px;
+    line-height: 50px;
+}
+
+.dropdown .dropdown-menu {
+    border: 1px solid  #f2f4f7;
+    background:  #fff;
+    box-shadow: 0 8px 8px -4px rgba(16, 24, 40, .03), 0 20px 24px -4px rgba(16, 24, 40, .08);
+    border-radius: 8px;
+    position: absolute;
+    inset: 0px auto auto 0px;
+    margin: 10px 0 0 !important;
+    padding-bottom: 0px !important;
+    z-index: 1;
+    overflow-y: auto;
+    max-height: none;
+    overflow: visible;
+    transform: translate(0px, 60px);
+    width: fit-content;
+    padding-top: 10px;
+}
+
+.dropdown #locationDropdown,#priceDropdown {
+    width: 167.97px;
+}
+
+.dropdown #nonSortDropdown {
+    width: 158px;
+}

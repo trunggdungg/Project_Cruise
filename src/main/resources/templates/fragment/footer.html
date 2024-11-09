@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixi Vivu Footer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        footer {
+            background-color: #101828;
+            color: #ffffff;
+            padding: 2rem 0;
+        }
+
+        .footer-logo {
+            max-width: 100px;
+        }
+
+        ul li a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <img src="https://mixivivu.com/_next/image?url=%2Fwhite-logo.png&w=256&q=75" alt="Mixi Vivu Logo"
+                     class="footer-logo mb-3">
+                <h5>Công ty TNHH Du Lịch và Dịch Vụ Mixivivu</h5>
+                <p>Tầng 7, số nhà 25, ngõ 38 phố Yên Lãng,<br>phường Láng Hạ, quận Đống Đa, TP. Hà Nội</p>
+                <p>Mã số doanh nghiệp: 0110378372 do Sở Kế hoạch và Đầu tư Thành phố Hà Nội cấp ngày 05/06/2023</p>
+            </div>
+            <div class="col-md-2 mb-4">
+                <h5>GIỚI THIỆU</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Về chúng tôi</a></li>
+                    <li><a href="#" class="text-white">Điều khoản và điều kiện</a></li>
+                    <li><a href="#" class="text-white">Chính sách riêng tư</a></li>
+                    <li><a href="#" class="text-white">Hướng dẫn sử dụng</a></li>
+                    <li><a href="#" class="text-white">Hình thức thanh toán</a></li>
+                    <li><a href="#" class="text-white">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 mb-4">
+                <h5>ĐIỂM ĐẾN</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Vịnh Hạ Long</a></li>
+                    <li><a href="#" class="text-white">Vịnh Lan Hạ</a></li>
+                    <li><a href="#" class="text-white">Đảo Cát Bà</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 mb-4">
+                <h5>DU THUYỀN</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Blog</a></li>
+                    <li><a href="#" class="text-white">Quy định chung và lưu ý</a></li>
+                    <li><a href="#" class="text-white">Câu hỏi thường gặp</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 mb-4">
+                <h5>LIÊN HỆ</h5>
+                <p>Hotline: 0922222016</p>
+                <p>Email: info@mixivivu.com</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js"
+        integrity="sha512-GzbaI5EsNzdEUq6/2XLYpr1y9CUZRIVsUeWTAFgULtQa5jZ3Nug8i0nZKM6jp9NffBCZhymPPQFcF0DK+JkRpw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script th:src="@{/web-assets/js/search_cruise.js}"></script>
+<script th:src="@{/web-assets/js/dropdown_search_cruise.js}"></script>
+</body>
+
+</html>

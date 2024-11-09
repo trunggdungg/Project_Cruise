@@ -31,8 +31,8 @@ public class Review {
     @Column(columnDefinition = "TEXT")
     String content;
     Integer rating;
-    LocalDateTime created_at;
-    LocalDateTime updated_at;
+    LocalDateTime createdAt;
+    LocalDateTime updatedAt;
 
 
 }

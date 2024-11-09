@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+<div id="header"></div>
+<div th:insert="~{/fragment/header}" style=" position: sticky;
+  z-index: 20;
+  top: 0;
+  background-color: white;"></div>
+
+
+
+<!-- video -->
+<div class="home-banner">
+    <div class="home-bg-video">
+        <video class="videoUrl" src="/web-assets/image/Mixivivuduthuyen.mp4" autoplay muted loop></video>
+
+    </div>
+</div>
+
+<section class="home tim-du-thuyen ">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10">
+                <div class="card shadow-sm">
+
+                    <!-- search -->
+                    <div class="card-body p-4 nav-search-cruise">
+                        <h2 class="text-center mb-2">Bạn lựa chọn du thuyền Hạ Long nào?</h2>
+                        <p class="text-center text-muted mb-5">Hơn 100 tour du thuyền hạng sang giá tốt đang chờ bạn
+                        </p>
+
+                        <div class="d-flex align-items-center flex-wrap">
+                            <div class="position-relative flex-grow-1 me-3 mb-3 mb-md-0">
+                                <i class="fas fa-search position-absolute search-icon-left"></i>
+                                <input type="text" class="form-control rounded-pill custom-height pl-5 input-search"
+                                       placeholder="Nhập tên du thuyền" style="padding-left: 40px;">
+                            </div>
+
+
+                            <div class="dropdown">
+                                <button
+                                        class="btn btn-outline-secondary dropdown-toggle rounded-pill me-3 mb-3 mb-md-0 d-flex justify-content-between align-items-center"
+                                        type="button" id="locationDropdown" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                    <i class="fas fa-location-dot me-2"></i>Tất cả địa điểm
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="locationDropdown">
+                                    <li><a class="dropdown-item" href="#" data-value="allLocation">Tất cả địa điểm</a></li>
+                                    <li><a class="dropdown-item" href="#" data-value="HaLong">Vịnh Hạ Long</a></li>
+                                    <li><a class="dropdown-item" href="#" data-value="LanHa">Vịnh Lan Ha</a></li>
+                                    <li><a class="dropdown-item" href="#" data-value="CatBa">Đảo Cát Bà</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="dropdown">
+                                <button
+                                        class="btn btn-outline-secondary dropdown-toggle rounded-pill me-3 mb-3 mb-md-0 d-flex justify-content-between align-items-center"
+                                        type="button" data-bs-toggle="dropdown" id="priceDropdown">
+                                    <i class="fas fa-dollar-sign me-2"></i>Tất cả mức giá
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="priceDropdown">
+                                    <li><a class="dropdown-item" href="#" data-value="allPrice">Tất cả mức giá</a></li>
+                                    <li><a class="dropdown-item" href="#" data-value="price_1_3">Từ 1 đến 3 triệu</a></li>
+                                    <li><a class="dropdown-item" href="#" data-value="price_3_6">Từ 3 đến 6 triệu</a></li>
+                                    <li><a class="dropdown-item" href="#" data-value="price_6">Trên 6 triệu</a></li>
+                                </ul>
+                            </div>
+
+
+                            <button class="btn btn-search px-4 rounded-pill" type="button">Tìm kiếm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="list-cruise">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="wrap-title">
+                    <div class="title">
+                        <h4>Du thuyền mới <br>và phổ biến nhất</h4>
+                        <div>
+                            <img src="/web-assets/image/heading-border.webp" alt="">
+                        </div>
+
+                    </div>
+                    <label class="lg para">Tận hưởng sự xa hoa và đẳng cấp tối đa trên
+                        du thuyền mới nhất và phổ biến nhất. Khám phá một hành trình tuyệt vời đưa bạn vào thế giới
+                        của
+                        sự sang trọng, tiện nghi và trải nghiệm không thể quên.
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  -->
+    <div class="row page-home container m-auto mt-5" style="padding: 0px;">
+        <!-- Cruise listing 1 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card card-body">
+                <div class="row g-0">
+                    <div class="col-12 div-img">
+                        <img src="https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/thumbnail/no53ab0y526yl825.webp"
+                             class="img-fluid card-img zoom-img" alt="Du thuyền Heritage Bình Chuẩn Cát Bà">
+                        <span class="position-absolute top-2 start-0 badge bg-warning text-dark m-3 icon-rating">
+                                <i class="fa-regular fa-star" style="color: #e13214;"></i>
+                                4.9 đánh giá
+                            </span>
+                    </div>
+                    <div class="col-12">
+                        <div class="card-body card-info-du-thuyen p-0">
+                            <p class="card-text">
+                                <small class="text-muted">
+                                    <i class="fas fa-location-dot me-2"></i>Vịnh Hạ Long
+                                </small>
+                            </p>
+                            <h5 class="card-title">Du thuyền Heritage Bình Chuẩn Cát Bà</h5>
+
+                            <p class="card-text"><i class="fa-solid fa-ship"></i> Hạ thủy 2019 - Tàu vỏ Kim loại -
+                                20 phòng</p>
+                            <hr class="separator">
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <h4 class="mb-0">3,675,000đ / khách</h4>
+                                <button class="btn btn-search px-4 rounded-pill" type="button"
+                                        style="height: 38px;">Đặt ngay</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cruise listing 2-->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card card-body">
+                <div class="row g-0">
+                    <div class="col-12 div-img">
+                        <img src="https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/thumbnail/no53ab0y526yl825.webp"
+                             class="img-fluid card-img zoom-img" alt="Du thuyền Heritage Bình Chuẩn Cát Bà">
+                        <span class="position-absolute top-2 start-0 badge bg-warning text-dark m-3 icon-rating">
+                                <i class="fa-regular fa-star" style="color: #e13214;"></i>
+                                4.9 đánh giá
+                            </span>
+                    </div>
+                    <div class="col-12">
+                        <div class="card-body card-info-du-thuyen p-0">
+                            <p class="card-text">
+                                <small class="text-muted">
+                                    <i class="fas fa-location-dot me-2"></i>Vịnh Hạ Long
+                                </small>
+                            </p>
+                            <h5 class="card-title">Du thuyền Heritage Bình Chuẩn Cát Bà</h5>
+
+                            <p class="card-text"><i class="fa-solid fa-ship"></i> Hạ thủy 2019 - Tàu vỏ Kim loại -
+                                20 phòng</p>
+                            <hr class="separator">
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <h4 class="mb-0">3,675,000đ / khách</h4>
+                                <button class="btn btn-search px-4 rounded-pill" type="button"
+                                        style="height: 38px;">Đặt ngay</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cruise listing 3  -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card card-body">
+                <div class="row g-0">
+                    <div class="col-12 div-img">
+                        <img src="https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/thumbnail/no53ab0y526yl825.webp"
+                             class="img-fluid card-img zoom-img" alt="Du thuyền Heritage Bình Chuẩn Cát Bà">
+                        <span class="position-absolute top-2 start-0 badge bg-warning text-dark m-3 icon-rating">
+                                <i class="fa-regular fa-star" style="color: #e13214;"></i>
+                                4.9 đánh giá
+                            </span>
+                    </div>
+                    <div class="col-12">
+                        <div class="card-body card-info-du-thuyen p-0">
+                            <p class="card-text">
+                                <small class="text-muted">
+                                    <i class="fas fa-location-dot me-2"></i>Vịnh Hạ Long
+                                </small>
+                            </p>
+                            <h5 class="card-title">Du thuyền Heritage Bình Chuẩn Cát Bà</h5>
+
+                            <p class="card-text"><i class="fa-solid fa-ship"></i> Hạ thủy 2019 - Tàu vỏ Kim loại -
+                                20 phòng</p>
+                            <hr class="separator">
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <h4 class="mb-0">3,675,000đ / khách</h4>
+                                <button class="btn btn-search px-4 rounded-pill" type="button"
+                                        style="height: 38px;">Đặt ngay</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- nut xem them -->
+        <div class="wrap-btn-see-more">
+            <button type="button" class="btn-position  btn-pd co-bg-btn  ">
+                <div class="label md">Xem tất cả Du thuyền</div>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+
+</section>
+<!-- danh gia -->
+<section>
+    <div class="list-cruise bg-blue comment-home sect-bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="wrap-title">
+                    <div class="title">
+                        <h4>Đánh giá từ những
+                            <br>người đã trải nghiệm
+                        </h4>
+                        <div>
+                            <img src="/web-assets/image/heading-border.webp" alt="">
+                        </div>
+
+                    </div>
+                    <label class="lg para">Khách hàng chia sẻ về những kỷ niệm tuyệt vời trên chuyến du lịch với
+                        chúng tôi.
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- comment -->
+        <div class="rating-section wrap-comment container">
+
+            <!-- Avatar and user information -->
+            <div class="user-info">
+                <img src="/web-assets/image/04_01 1.jpg" alt="Avatar" class="avatar" width="45" height="45"
+                     style="border-radius: 50%; margin-right: 8px;border: 1px solid #e1dbdb99;">
+                <label class="md name-user">Thái Thùy Dương</label>
+            </div>
+
+            <p class="sm comment-user">Mình vừa tham gia tour du thuyền 2 ngày 1 đêm vào đợt
+                30/4-1/5 vừa rồi và thực sự rất ưng ý! Đồ ăn ngon miệng, hướng dẫn viên dịch thuật
+                cũng rất giỏi. Đặc biệt, các bạn nhân viên Mixivivu rất nhiệt tình tư vấn và hỗ trợ
+                mình tận tình. Chắc chắn mình sẽ đặt tour với Mixivivu cho chuyến đi sau!</p>
+            <div class="wrap-date-comment">
+                <p class="date-comment">08/05/2024</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <!-- các điểm đến  -->
+    <div class="list-cruise comment-home">
+        <div class="container">
+            <div class="row ">
+                <div class="wrap-title">
+                    <div class="title gap-8 destination">
+                        <h4>Các điểm đến của Mixivivu
+                        </h4>
+                        <label class="lg para">Khám phá vẻ đẹp tuyệt vời của Du thuyền Hạ Long: Hành trình đến thiên
+                            đường thiên nhiên
+                        </label>
+                        <div>
+                            <img src="/web-assets/image/heading-border.webp" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- destinaton -->
+<section class="home tim-du-thuyen" style="padding-top: 0px !important;">
+    <!--  -->
+    <div class="row page-home container m-auto" style="padding: 0px; ">
+        <!-- Cruise listing 1 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card card-body card-destination">
+                <div class="row g-0">
+                    <div class="col-12 div-img">
+                        <img src="https://minio.fares.vn/mixivivu-dev/home-page/547b7d230cacd9f280bd3.jpg"
+                             class="img-fluid card-img zoom-img" alt="Du thuyền Heritage Bình Chuẩn Cát Bà">
+
+                    </div>
+                    <div class="col-12 d-flex align-items-center flex-column">
+                        <div class="card-body card-info-du-thuyen p-0 destinations text-center">
+                            <h6 class="mt-4">Vịnh Hạ Long</h6>
+                            <div class="d-flex justify-content-center align-items-center mt-2">
+                                <button class="btn btn-search px-4 rounded-pill mt-4" type="button"
+                                        style="height: 38px;">Xem ngay</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cruise listing 2-->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card card-body card-destination">
+                <div class="row g-0">
+                    <div class="col-12 div-img">
+                        <img src="https://minio.fares.vn/mixivivu-dev/home-page/547b7d230cacd9f280bd3.jpg"
+                             class="img-fluid card-img zoom-img" alt="Du thuyền Heritage Bình Chuẩn Cát Bà">
+
+                    </div>
+                    <div class="col-12 d-flex align-items-center flex-column">
+                        <div class="card-body card-info-du-thuyen p-0 destinations text-center">
+                            <h6 class=" mt-4">Vịnh Lan Hạ</h6>
+                            <div class="d-flex justify-content-center align-items-center mt-2">
+                                <button class="btn btn-search px-4 rounded-pill mt-4" type="button"
+                                        style="height: 38px;">Xem ngay</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cruise listing 3  -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card card-body card-destination">
+                <div class="row g-0">
+                    <div class="col-12 div-img">
+                        <img src="https://minio.fares.vn/mixivivu-dev/home-page/547b7d230cacd9f280bd3.jpg"
+                             class="img-fluid card-img zoom-img" alt="Du thuyền Heritage Bình Chuẩn Cát Bà">
+
+                    </div>
+                    <div class="col-12 d-flex flex-column align-items-center">
+                        <div class="card-body card-info-du-thuyen p-0 destinations text-center">
+                            <h6 class="mt-4">Đảo Cát Bà</h6>
+                            <div class="d-flex justify-content-center align-items-center mt-2">
+                                <button class="btn btn-search px-4 rounded-pill mt-4" type="button"
+                                        style="height: 38px;">Xem ngay</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!-- blog -->
+<div class="sect-bg" style="background-color: #f3ffff;">
+    <section class="home tim-du-thuyen ">
+
+        <div class="list-cruise " style="padding-top: 0px !important; margin-top: 0px ;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="wrap-title">
+                        <div class="title">
+                            <h4>Hạ Long: Khám phá Sự đặc sắc
+                                <br> và Cập nhật tin tức mới nhất
+                            </h4>
+                            <div>
+                                <img src="/web-assets/image/heading-border.webp" alt="">
+                            </div>
+
+                        </div>
+                        <label class="lg para">Hạ Long: Bí mật và Cuộc sống trong Vịnh - Khám phá và Cập nhật những
+                            tin
+                            tức hấp dẫn từ điểm đến tuyệt vời này.
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  -->
+        <div class="row page-home container m-auto mt-5 " style="padding: 0px;">
+            <!-- Cruise listing 1 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card card-body">
+                    <div class="row g-0">
+                        <div class="col-12 div-img">
+                            <img src="https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/thumbnail/no53ab0y526yl825.webp"
+                                 class="img-fluid card-img zoom-img" alt="Du thuyền Heritage Bình Chuẩn Cát Bà">
+                        </div>
+                        <div class="col-12">
+                            <div class="card-body card-info-du-thuyen p-0 ">
+
+                                <h5 class="card-title mt-4">Cá ngựa khô – Món quà quý từ vùng biển Nha Trang</h5>
+
+                                <p class="blog-text">
+                                    Cá ngựa là một sinh vật đặc biệt của đại dương. Từ hình dáng cho tới chức năng
+                                    cá ngựa đều rất đặc biệt. Hiếm có loài cá nào mà con đực lại là những “bà mẹ”
+                                    thiên bẩm như cá ngựa. Thêm vào đó cá ngựa không giống như các loài hải sản
+                                    thông thường có thể chế biến thành món ăn mà là một vị thuốc rất quý. Ở Việt
+                                    Nam, đặc biệt là Nha Trang cá ngựa khô là một đặc sản quý. Bởi vậy nếu đi du
+                                    lịch Nha Trang du khách nào cũng muốn mua một ít cá ngựa khô về làm quà.
+                                </p>
+
+                                <div class="wrap-date-blog">
+                                    <p class="date-blog">08/05/2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cruise listing 2-->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card card-body">
+                    <div class="row g-0">
+                        <div class="col-12 div-img">
+                            <img src="https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/thumbnail/no53ab0y526yl825.webp"
+                                 class="img-fluid card-img zoom-img" alt="Du thuyền Heritage Bình Chuẩn Cát Bà">
+
+                        </div>
+                        <div class="col-12">
+                            <div class="card-body card-info-du-thuyen p-0">
+
+                                <h5 class="card-title mt-4">5 món ăn không thể bỏ lỡ khi du lịch Phú Quốc</h5>
+
+                                <p class="blog-text">Cá ngựa là một sinh vật đặc biệt của đại dương. Từ hình dáng
+                                    cho tới chức năng cá ngựa đều rất đặc biệt. Hiếm có loài cá nào mà con đực lại
+                                    là những “bà mẹ” thiên bẩm như cá ngựa. Thêm vào đó cá ngựa không giống như các
+                                    loài hải sản thông thường có thể chế biến thành món ăn mà là một vị thuốc rất
+                                    quý. Ở Việt Nam, đặc biệt là Nha Trang cá ngựa khô là một đặc sản quý. Bởi vậy
+                                    nếu đi du lịch Nha Trang du khách nào cũng muốn mua một ít cá ngựa khô về làm
+                                    quà.</p>
+
+                                <div class="wrap-date-blog">
+                                    <p class="date-blog">08/05/2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cruise listing 3  -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card card-body">
+                    <div class="row g-0">
+                        <div class="col-12 div-img">
+                            <img src="https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/thumbnail/no53ab0y526yl825.webp"
+                                 class="img-fluid card-img zoom-img" alt="Du thuyền Heritage Bình Chuẩn Cát Bà">
+
+                        </div>
+                        <div class="col-12">
+                            <div class="card-body card-info-du-thuyen p-0">
+
+                                <h5 class="card-title mt-4 blog-title">5 món ăn không thể bỏ lỡ khi du lịch Phú Quốc</h5>
+
+                                <p class="blog-text">Cá ngựa là một sinh vật đặc biệt của đại dương. Từ hình dáng
+                                    cho tới chức năng cá ngựa đều rất đặc biệt. Hiếm có loài cá nào mà con đực lại
+                                    là những “bà mẹ” thiên bẩm như cá ngựa. Thêm vào đó cá ngựa không giống như các
+                                    loài hải sản thông thường có thể chế biến thành món ăn mà là một vị thuốc rất
+                                    quý. Ở Việt Nam, đặc biệt là Nha Trang cá ngựa khô là một đặc sản quý. Bởi vậy
+                                    nếu đi du lịch Nha Trang du khách nào cũng muốn mua một ít cá ngựa khô về làm
+                                    quà.</p>
+
+                                <div class="wrap-date-blog">
+                                    <p class="date-blog">08/05/2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- nut xem them -->
+            <div class="wrap-btn-see-more">
+                <button type="button" class="btn-position  btn-pd co-bg-btn  ">
+                    <div class="label md">Xem tất cả</div>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+
+    </section>
+</div>
+
+
+
+<!-- Bootstrap JavaScript Bundle (bao gồm cả Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<div id="footer"></div>
+<div th:insert="~{/fragment/footer}"></div>
+</body>
+
+</html>

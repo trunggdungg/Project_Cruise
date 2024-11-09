@@ -30,6 +30,6 @@ public class User {
     String password;
     String address;
     String avatar;
-    LocalDateTime created_at;
-    LocalDateTime updated_at;
+    LocalDateTime createdAt;
+    LocalDateTime updatedAt;
 }

@@ -1,0 +1,191 @@
+.gap-8{
+    gap: 8px !important;
+}
+.home-banner .home-bg-video {
+    position: relative;
+    margin: auto;
+    width: calc(100vw - 64px);
+    height: 55vw;
+    max-width: 1392px;
+    max-height: 784px;
+    border-radius: 24px;
+}
+
+.home-bg-video .videoUrl {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+}
+
+.home .nav-search-cruise {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1076px;
+    z-index: 1;
+}
+.wrap-title {
+    display: flex ;
+    flex-grow: 1;
+    gap: 16px;
+}
+
+.wrap-title .title {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1 0;
+}
+.wrap-title .para {
+    width: 488px;
+    color:  #475467;
+    flex-shrink: 0;
+}
+
+.list-cruise{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 80px 0 0 0;
+}
+
+.list-cruise h4{
+    font-size: 36px;
+    font-weight: 700;
+    font-family: Archivo, sans-serif;
+    color: #101828;
+}
+
+.list-cruise .para{
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Archivo, sans-serif;
+    color: #475467;
+}
+
+.page-home .card-info-du-thuyen{
+    margin-left: 0px !important;
+}
+.page-home .card-text{
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    font-family: Archivo, sans-serif !important;
+    color: #475467 !important;
+}
+.page-home .card-title{
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    font-family: Archivo, sans-serif !important;
+    color: #101828 !important;
+}
+
+.page-home .card-text{
+    margin-top: 15px !important;
+}
+
+.page-home h4{
+    font-size: 18px ;
+}
+
+/* nut them */
+.wrap-btn-see-more {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.co-bg-btn {
+    background: linear-gradient(0deg, #fff, #fff), linear-gradient(0deg, #eaecf0, #eaecf0);
+    border: 1px solid #eaecf0;
+    color: #1d2939;
+    fill: #1d2939;
+}
+
+.btn-pd {
+    padding: 16px 20px;
+    white-space: nowrap;
+}
+.btn-position {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrap-btn-see-more button {
+    border-radius: 100px;
+    box-shadow:  0px 1px 2px 0px #1018280d;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wrap-btn-see-more .btn-position:hover {
+    background: #f9fafb;
+    color: #344054;
+    fill: #344054;
+    cursor: pointer;
+    
+}
+
+section .bg-blue{
+    background-color: #f3ffff;
+}
+.comment-home{
+    margin-top: 0px;
+    padding-bottom: 80px;
+}
+
+/* điểm đến */
+.destination{
+  align-items: center;
+  text-align: center;
+}
+
+.destinations h6{
+    font-size: 24px ;
+    line-height: 32px;
+    font-weight: 700;
+}
+
+.destinations {
+   text-align: center;
+}
+
+.card-destination{
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, .06), 0px 1px 3px 0px rgba(16, 24, 40, .1) !important;
+}
+
+/* blog */
+.wrap-date-blog .date-blog{
+    font-size: 14px !important;
+    font-weight: 400;
+    font-family: Archivo, sans-serif;
+    color: #475467 !important;
+}
+
+.blog-text {
+    font-size: 14px !important;
+    display: -webkit-box;        /* Sử dụng flexbox cho các dòng văn bản */
+    -webkit-line-clamp: 2;       /* Số dòng muốn hiển thị trước khi cắt */
+    line-clamp: 2;               /* Số dòng muốn hiển thị trước khi cắt */
+    -webkit-box-orient: vertical;/* Hướng của box (dọc) */
+    overflow: hidden;            /* Ẩn phần nội dung tràn ra ngoài */
+    line-height: normal !important;
+    text-overflow: ellipsis;     /* Hiển thị dấu 3 chấm khi bị cắt */
+}
+
+
+.blog-title{
+    display: -webkit-box;        /* Sử dụng flexbox cho các dòng văn bản */
+    -webkit-line-clamp: 2;       /* Số dòng muốn hiển thị trước khi cắt */
+    line-clamp: 2;               /* Số dòng muốn hiển thị trước khi cắt */
+    -webkit-box-orient: vertical;/* Hướng của box (dọc) */
+    overflow: hidden;            /* Ẩn phần nội dung tràn ra ngoài */
+}

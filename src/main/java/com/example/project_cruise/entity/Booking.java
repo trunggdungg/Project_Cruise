@@ -27,7 +27,7 @@ public class Booking {
     private BigDecimal totalPrice;
     String note;
     Boolean bookingStatus;
-    LocalDateTime created_at;
+    LocalDateTime createdAt;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

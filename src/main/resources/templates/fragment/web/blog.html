@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+</head>
+<body>
+<div id="header"></div>
+<div th:insert="~{/fragment/header}"  style=" position: sticky;
+  z-index: 20;
+  top: 0;
+  background-color: white;"></div>
+
+
+
+<section>
+    <div class="sect-bg">
+        <section class="home tim-du-thuyen ">
+
+            <div class="list-cruise " style="padding-top: 0px !important; margin-top: 0px ;">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="wrap-title">
+                            <div class="title">
+                                <h4>Hạ Long: Khám phá Sự đặc sắc
+                                    <br> và Cập nhật tin tức mới nhất
+                                </h4>
+                                <div>
+                                    <img src="/web-assets/image/heading-border.webp" alt="">
+                                </div>
+
+                            </div>
+                            <label class="lg para">Hạ Long: Bí mật và Cuộc sống trong Vịnh - Khám phá và Cập nhật những
+                                tin
+                                tức hấp dẫn từ điểm đến tuyệt vời này.
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container mt-5 nav-blog">
+                <ul class="nav nav-tabs nav-detail">
+                    <li class="nav-item">
+                        <a class="nav-link navTab " href="#" data-target="all">Tất cả</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navTab" href="#" data-target="du-lich">Du lịch</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navTab" href="#" data-target="khach-san">Khách sạn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navTab" href="#" data-target="du-thuyen">Du thuyền</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+            <!--  -->
+            <div class="content">
+                <div id="all" class="tab-content active">
+
+                    <div class="row page-home container m-auto mt-5 " style="padding: 0px;">
+                        <!-- Cruise listing 1 -->
+                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+                            <div class="card card-body card-blogs">
+                                <div class="row g-0">
+                                    <div class="col-12 div-img">
+                                        <img src="https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/thumbnail/no53ab0y526yl825.webp"
+                                             class="img-fluid card-img zoom-img" alt="Du thuyền Heritage Bình Chuẩn Cát Bà">
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="card-body card-info-du-thuyen p-0 ">
+
+                                            <h5 class="card-title mt-4">​Cá ngựa khô – Món quà quý từ vùng biển Nha Trang</h5>
+
+                                            <p class="blog-text">
+                                                Cá ngựa là một sinh vật đặc biệt của đại dương. Từ hình dáng cho tới chức năng
+                                                cá ngựa đều rất đặc biệt. Hiếm có loài cá nào mà con đực lại là những “bà mẹ”
+                                                thiên bẩm như cá ngựa. Thêm vào đó cá ngựa không giống như các loài hải sản
+                                                thông thường có thể chế biến thành món ăn mà là một vị thuốc rất quý. Ở Việt
+                                                Nam, đặc biệt là Nha Trang cá ngựa khô là một đặc sản quý. Bởi vậy nếu đi du
+                                                lịch Nha Trang du khách nào cũng muốn mua một ít cá ngựa khô về làm quà.
+                                            </p>
+
+                                            <div class="wrap-date-blog">
+                                                <p class="date-blog">08/05/2024</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cruise listing 2-->
+                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+                            <div class="card card-body card-blogs">
+                                <div class="row g-0">
+                                    <div class="col-12 div-img">
+                                        <img src="https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/thumbnail/no53ab0y526yl825.webp"
+                                             class="img-fluid card-img zoom-img" alt="Du thuyền Heritage Bình Chuẩn Cát Bà">
+
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="card-body card-info-du-thuyen p-0">
+
+                                            <h5 class="card-title mt-4">5 món ăn không thể bỏ lỡ khi du lịch Phú Quốc</h5>
+
+                                            <p class="blog-text">Cá ngựa là một sinh vật đặc biệt của đại dương. Từ hình dáng
+                                                cho tới chức năng cá ngựa đều rất đặc biệt. Hiếm có loài cá nào mà con đực lại
+                                                là những “bà mẹ” thiên bẩm như cá ngựa. Thêm vào đó cá ngựa không giống như các
+                                                loài hải sản thông thường có thể chế biến thành món ăn mà là một vị thuốc rất
+                                                quý. Ở Việt Nam, đặc biệt là Nha Trang cá ngựa khô là một đặc sản quý. Bởi vậy
+                                                nếu đi du lịch Nha Trang du khách nào cũng muốn mua một ít cá ngựa khô về làm
+                                                quà.</p>
+
+                                            <div class="wrap-date-blog">
+                                                <p class="date-blog">08/05/2024</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cruise listing 3  -->
+                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+                            <div class="card card-body card-blogs">
+                                <div class="row g-0">
+                                    <div class="col-12 div-img">
+                                        <img src="https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/thumbnail/no53ab0y526yl825.webp"
+                                             class="img-fluid card-img zoom-img" alt="Du thuyền Heritage Bình Chuẩn Cát Bà">
+
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="card-body card-info-du-thuyen p-0">
+
+                                            <h5 class="card-title mt-4 blog-title">5 món ăn không thể bỏ lỡ khi du lịch Phú Quốc</h5>
+
+                                            <p class="blog-text">Cá ngựa là một sinh vật đặc biệt của đại dương. Từ hình dáng
+                                                cho tới chức năng cá ngựa đều rất đặc biệt. Hiếm có loài cá nào mà con đực lại
+                                                là những “bà mẹ” thiên bẩm như cá ngựa. Thêm vào đó cá ngựa không giống như các
+                                                loài hải sản thông thường có thể chế biến thành món ăn mà là một vị thuốc rất
+                                                quý. Ở Việt Nam, đặc biệt là Nha Trang cá ngựa khô là một đặc sản quý. Bởi vậy
+                                                nếu đi du lịch Nha Trang du khách nào cũng muốn mua một ít cá ngựa khô về làm
+                                                quà.</p>
+
+                                            <div class="wrap-date-blog">
+                                                <p class="date-blog">08/05/2024</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- phan trang-->
+                        <div class="container mt-5">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="text-muted">Đang xem: <strong>5</strong> của <strong>64</strong></p>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <nav aria-label="Page navigation">
+                                        <ul class="pagination justify-content-end">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><span class="page-link">...</span></li>
+                                            <li class="page-item"><a class="page-link" href="#">11</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">12</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">13</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="du-lich" class="tab-content">
+                    <h4>Nội dung du lịch</h4>
+                    <!-- Nội dung cho tab "Du lịch" -->
+                </div>
+
+                <div id="khach-san" class="tab-content">
+                    <h4>Nội dung khách sạn</h4>
+                    <!-- Nội dung cho tab "Khách sạn" -->
+                </div>
+
+                <div id="du-thuyen" class="tab-content">
+                    <h4>Nội dung du thuyền</h4>
+                    <!-- Nội dung cho tab "Du thuyền" -->
+                </div>
+            </div>
+
+
+
+        </section>
+    </div>
+</section>
+
+
+
+
+
+
+
+<script>
+
+    document.querySelectorAll('.navTab').forEach(function(navItem) {
+        navItem.addEventListener('click', function(event) {
+            event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ a
+
+            // Ẩn tất cả các nội dung tab
+            document.querySelectorAll('.tab-content').forEach(function(content) {
+                content.classList.remove('active');
+            });
+
+            // Hiển thị nội dung tab tương ứng
+            const targetId = this.getAttribute('data-target');
+            document.getElementById(targetId).classList.add('active');
+        });
+    });
+
+
+</script>
+<div id="footer"></div>
+<div th:insert="~{/fragment/footer}"></div>
+</body>
+</html>

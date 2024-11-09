@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid{
+    width: 100%;
+    padding: 0 0 0 0 ;
+}
+header .nav-link,.btn-login{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header .nav-item{
+    margin-left: 20px;
+}
+
+.separator{
+  margin: 0px;
+}
+
+.header-main .nav-link {
+    position: relative; /* Để tạo vị trí cho pseudo-element */
+    text-decoration: none; /* Tắt gạch chân mặc định */
+    color: #000; /* Màu chữ mặc định */
+  }
+  
+  .header-main .nav-link::after {
+    content: ""; /* Tạo một pseudo-element */
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    left: 0; /* Căn trái */
+    bottom: -27px; /* Cách đáy một chút */
+    width: 100%; /* Chiều rộng bằng với chữ */
+    height: 2px; /* Độ dày của đường gạch */
+    background-color: #77DADA; /* Màu sắc của đường gạch */
+    transform: scaleX(0); /* Bắt đầu với chiều rộng bằng 0 */
+    transition: transform 0.3s ease; /* Hiệu ứng chuyển đổi */
+  }
+  
+  /* Hiệu ứng khi hover */
+  .nav-link:hover::after,
+  .nav-link:focus::after {
+    transform: scaleX(1); /* Khi hover hoặc click, mở rộng chiều rộng */
+  }
+  
+#header{
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  background-color: white;
+}

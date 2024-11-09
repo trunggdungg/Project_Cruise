@@ -44,16 +44,17 @@ public class Cruise {
     @JoinColumn(name = "owned_id")
     Owned owned;
 
-    LocalDateTime created_at;
-    LocalDateTime updated_at;
 
-    @ManyToMany
+    LocalDateTime createdAt;
+    LocalDateTime updatedAt;
+
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "cruise_rules",
         joinColumns = @JoinColumn(name = "rule_id"),
         inverseJoinColumns = @JoinColumn(name = "cruise_id"))
     List<Rule> rules;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "cruise_tags",
         joinColumns = @JoinColumn(name = "cruise_id"),
         inverseJoinColumns = @JoinColumn(name = "tag_id"))

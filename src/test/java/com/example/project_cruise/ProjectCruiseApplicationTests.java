@@ -71,6 +71,21 @@ class ProjectCruiseApplicationTests {
 
 
     @Test
+    void allLOcation() {
+        List<Location> locationNames = locationRepository.findAll();
+        System.out.println(locationNames);
+    }
+    @Test
+    void contextLoads() {
+        List<String> locationNames = locationRepository.findDistinctLocationName();
+        System.out.println(locationNames);
+    }
+@Test
+void findTagOfCruise() {
+    Object cruisp = cruiseRepository.findTagById(1);
+    System.out.println(cruisp);
+}
+    @Test
     void save_users() {
         Faker faker = new Faker();
         for (int i = 0; i < 50; i++) {
@@ -83,8 +98,8 @@ class ProjectCruiseApplicationTests {
                 .password(faker.internet().password())
                 .address(faker.address().fullAddress())
                 .avatar("https://placehold.co/200x200?text=" + name.substring(0, 1).toUpperCase())
-                .created_at(LocalDateTime.now())
-                .updated_at(LocalDateTime.now())
+                .createdAt(LocalDateTime.now())
+                .updatedAt(LocalDateTime.now())
                 .build();
             userRepository.save(user);
 
@@ -187,9 +202,9 @@ class ProjectCruiseApplicationTests {
                 .departureTime(LocalTime.now())
                 .arrivalTime(LocalTime.now().plusHours(12))
                 .location(randomLocation)
-                .created_at(LocalDateTime.now())
+                .createdAt(LocalDateTime.now())
                 .owned(randomOwned)
-                .updated_at(LocalDateTime.now())
+                .updatedAt(LocalDateTime.now())
                 .tags(randomTags)
                 .rules(randomRules)
                 .build();
@@ -223,9 +238,9 @@ class ProjectCruiseApplicationTests {
                 .description(faker.lorem().sentence())
                 .thumbnail("https://placehold.co/200x200?text=" + title.substring(0, 1).toUpperCase())
                 .status(random.nextBoolean())
-                .created_at(LocalDateTime.now())
-                .updated_at(LocalDateTime.now())
-                .published_at(LocalDateTime.now())
+                .createdAt(LocalDateTime.now())
+                .updatedAt(LocalDateTime.now())
+                .publishedAt(LocalDateTime.now())
                 .user(randomAdmin)
                 .build();
             blogRepository.save(blog);
@@ -273,7 +288,7 @@ class ProjectCruiseApplicationTests {
             CabinTypeImage cabinTypeImage = CabinTypeImage.builder()
                 .type(faker.name().title())
                 .urlImage("https://placehold.co/200x200?text=" + faker.name().firstName().substring(0, 1).toUpperCase())
-                .created_at(LocalDateTime.now())
+                .createdAt(LocalDateTime.now())
                 .cabinType(randomCabinType) // Sử dụng cabinType đã chọn ngẫu nhiên
                 .build();
 
@@ -281,30 +296,64 @@ class ProjectCruiseApplicationTests {
         }
     }
 
+//    @Test
+//    void save_cruise_img() {
+//        Faker faker = new Faker();
+//        Random random = new Random();
+//        List<Cruise> cruises = cruiseRepository.findAll();
+//        for (int i = 0; i < 50; i++) {
+//            Cruise cruise = cruises.get(random.nextInt(cruises.size()));
+//            CruiseImage cruiseImage = CruiseImage.builder()
+//                .type(faker.name().title())
+//                .urlImage("https://placehold.co/200x200?text=" + faker.name().firstName().substring(0, 1).toUpperCase())
+//                .createdAt(LocalDateTime.now())
+//                .cruise(cruise)
+//                .build();
+//            cruiseImageRepository.save(cruiseImage);
+//        }
+//    }
+
     @Test
     void save_cruise_img() {
         Faker faker = new Faker();
         Random random = new Random();
         List<Cruise> cruises = cruiseRepository.findAll();
-        for (int i = 0; i < 20; i++) {
-            Cruise cruise = cruises.get(random.nextInt(cruises.size()));
-            CruiseImage cruiseImage = CruiseImage.builder()
-                .type(faker.name().title())
-                .urlImage("https://placehold.co/200x200?text=" + faker.name().firstName().substring(0, 1).toUpperCase())
-                .created_at(LocalDateTime.now())
-                .cruise(cruise)
-                .build();
-            cruiseImageRepository.save(cruiseImage);
+        for (Cruise cruise : cruises) {
+            int numberOfImages = random.nextInt(3) + 3; // Generate a random number between 3 and 5
+            for (int i = 0; i < numberOfImages; i++) {
+                CruiseImage cruiseImage = CruiseImage.builder()
+                    .type(faker.name().title())
+                    .urlImage("https://placehold.co/200x200?text=" + faker.name().firstName().substring(0, 1).toUpperCase())
+                    .createdAt(LocalDateTime.now())
+                    .cruise(cruise)
+                    .build();
+                cruiseImageRepository.save(cruiseImage);
+            }
         }
     }
 
-    @Test
-    void save_decrtiption_short() {
-        Faker faker = new Faker();
-        Random random = new Random();
-        List<Cruise> cruises = cruiseRepository.findAll();
-        for (int i = 0; i < 20; i++) {
-            Cruise cruise = cruises.get(random.nextInt(cruises.size()));
+//    @Test
+//    void save_decrtiption_short() {
+//        Faker faker = new Faker();
+//        Random random = new Random();
+//        List<Cruise> cruises = cruiseRepository.findAll();
+//        for (int i = 0; i < 20; i++) {
+//            Cruise cruise = cruises.get(random.nextInt(cruises.size()));
+//            DescriptionShort descriptionShort = DescriptionShort.builder()
+//                .cruise(cruise)
+//                .shortDescription(faker.lorem().sentence())
+//                .build();
+//            descriptionShortRepository.save(descriptionShort);
+//        }
+//    }
+@Test
+void save_description_short() {
+    Faker faker = new Faker();
+    Random random = new Random();
+    List<Cruise> cruises = cruiseRepository.findAll();
+    for (Cruise cruise : cruises) {
+        int numberOfDescriptions = random.nextInt(3) + 3; // Generate a random number between 3 and 5
+        for (int i = 0; i < numberOfDescriptions; i++) {
             DescriptionShort descriptionShort = DescriptionShort.builder()
                 .cruise(cruise)
                 .shortDescription(faker.lorem().sentence())
@@ -312,6 +361,7 @@ class ProjectCruiseApplicationTests {
             descriptionShortRepository.save(descriptionShort);
         }
     }
+}
 
     @Test
     void save_schedule() {
@@ -379,7 +429,7 @@ class ProjectCruiseApplicationTests {
                 .totalPrice(BigDecimal.valueOf(faker.number().randomNumber(2, true)))
                 .note(faker.lorem().sentence())
                 .bookingStatus(random.nextBoolean())
-                .created_at(LocalDateTime.now())
+                .createdAt(LocalDateTime.now())
                 .user(user)
                 .cruise(cruise)
                 .cabins(randomCabins)
@@ -419,8 +469,8 @@ class ProjectCruiseApplicationTests {
             Review review = Review.builder()
                 .content(faker.lorem().paragraph())
                 .rating(faker.number().numberBetween(1, 5))
-                .created_at(LocalDateTime.now())
-                .updated_at(LocalDateTime.now())
+                .createdAt(LocalDateTime.now())
+                .updatedAt(LocalDateTime.now())
                 .user(user)
                 .booking(booking)
                 .build();

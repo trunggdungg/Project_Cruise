@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+<div id="header"></div>
+<div th:insert="~{/fragment/header}" style=" position: sticky;
+  z-index: 20;
+  top: 0;
+  background-color: white;"></div>
+
+
+<section class="tim-du-thuyen sect-bg">
+    <div class="container " id="fromsSearch">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10">
+                <div class="card shadow-sm">
+
+                    <div class="card-body p-4">
+                        <h2 class="text-center mb-2">Bạn lựa chọn du thuyền Hạ Long nào?</h2>
+                        <p class="text-center text-muted mb-5">Hơn 100 tour du thuyền hạng sang giá tốt đang chờ bạn</p>
+
+                        <div class="d-flex align-items-center flex-wrap">
+                            <div class="position-relative flex-grow-1 me-3 mb-3 mb-md-0">
+                                <i class="fas fa-search position-absolute search-icon-left"></i>
+                                <input type="text" class="form-control rounded-pill custom-height pl-5 input-search"
+                                       id="inputSearch" placeholder="Nhập tên du thuyền" style="padding-left: 40px;">
+                            </div>
+
+                            <div class="dropdown">
+                                <button class="btn btn-outline-secondary dropdown-toggle rounded-pill me-3 mb-3 mb-md-0 d-flex justify-content-between align-items-center"
+                                        type="button" id="locationDropdown" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                    <i class="fas fa-location-dot me-2"></i>Tất cả địa điểm
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="locationDropdown" >
+                                    <li><a class="dropdown-item" href="#" data-value="allLocation">Tất cả địa điểm</a> </li>
+                                     <li><a class="dropdown-item" href="#"
+                                            th:each="lo :${locationNames}"
+                                            th:text="${lo}"
+                                            th:data-value="${lo}">Vịnh Hạ Long</a></li>
+<!--                                    <li><a class="dropdown-item" href="#" data-value="HaLong">Vịnh Hạ Long</a></li>-->
+<!--                                    <li><a class="dropdown-item" href="#" data-value="LanHa">Vịnh Lan Ha</a></li>-->
+<!--                                    <li><a class="dropdown-item" href="#" data-value="CatBa">Đảo Cát Bà</a></li>-->
+                                </ul>
+                            </div>
+
+                            <div class="dropdown ">
+                                <button class="btn btn-outline-secondary dropdown-toggle rounded-pill me-3 mb-3 mb-md-0 d-flex justify-content-between align-items-center"
+                                        type="button" id="priceDropdown" data-bs-toggle="dropdown">
+                                    <i class="fas fa-dollar-sign me-2"></i>Tất cả mức giá
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="priceDropdown">
+                                    <li><a class="dropdown-item" href="#" data-value="allPrice">Tất cả mức giá</a></li>
+                                    <li><a class="dropdown-item" href="#" data-value="price_1_3">Từ 1 đến 3 triệu</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" data-value="price_3_6">Từ 3 đến 6 triệu</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" data-value="price_6">Trên 6 triệu</a></li>
+                                </ul>
+                            </div>
+
+                            <button class="btn btn-search px-4 rounded-pill" type="button" id="searchButton">Tìm kiếm
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Tìm thấy -->
+        <div class="row mt-5">
+            <div class="col-12 d-flex justify-content-between align-items-center flex-wrap">
+                <h4 class="text-center mb-0 text-reult-search">Tìm thấy 10 kết quả</h4>
+
+                <div class="dropdown ">
+                    <button
+                            class="btn btn-outline-secondary dropdown-toggle rounded-pill me-3 mb-3 mb-md-0"
+                            type="button" data-bs-toggle="dropdown" id="nonSortDropdown">
+                        Không sắp xếp
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="nonSortDropdown">
+                        <li><a class="dropdown-item" href="#" data-value="noSort">Không sắp xếp</a></li>
+                        <li><a class="dropdown-item" href="#" data-value="lowToHigh">Giá thấp đến cao</a></li>
+                        <li><a class="dropdown-item" href="#" data-value="highToLow">Giá cao đến thấp</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <img src="/web-assets/image/heading-border.webp" alt="">
+        </div>
+    </div>
+
+    <!-- danh sách du thuyền -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Sidebar with filters -->
+            <div class="col-12 col-md-3 mb-4">
+                <div class="card border-list-tag">
+                    <div class="card-body">
+                        <h5 class="card-title d-flex justify-content-between align-items-center">
+                            Lọc kết quả
+                            <button class="btn btn-search px-4 rounded-pill" type="button" style="height: 38px;">Xóa
+                                lọc
+                            </button>
+                        </h5>
+
+                        <hr class="separator">
+                        <h6 class="mt-4">Xếp hạng sao</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="star3">
+                            <label class="form-check-label" for="star3">3 sao</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="star4">
+                            <label class="form-check-label" for="star4">4 sao</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="star5">
+                            <label class="form-check-label" for="star5">5 sao</label>
+                        </div>
+
+                        <h6 class="mt-4">Tiện ích</h6>
+                        <div id="tagContainer">
+                            <div class="form-check" th:each="tag : ${tags}">
+                                <input class="form-check-input" type="checkbox"
+                                       th:value="${tag.id}"
+                                       th:id="'tag' + ${tag.id}"
+                                       onclick="handleTagChange()">
+                                <label class="form-check-label"
+                                       th:for="'tag' + ${tag.id}"
+                                       th:text="${tag.name}"></label>
+                            </div>
+                        </div>
+
+                        <div id="searchResults"></div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="pool">
+                            <label class="form-check-label" for="pool">Có bể sục</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Main content area with cruise listings -->
+            <div class="col-12 col-md-9" id="cruise-list">
+                <!-- Cruise listing 1 -->
+                <div class="card mb-4 card-body" th:each="cruise : ${pageCruises.getContent()}">
+                    <div class="row g-0">
+                        <div class="col-12 col-md-5 mb-3 mb-md-0 div-img">
+                            <!--                            src="https://minio.fares.vn/mixivivu-dev/tour/du-thuyen-heritage-binh-chuan-cat-ba/thumbnail/no53ab0y526yl825.webp"-->
+                            <img th:src="${cruiseImagesMap.get(cruise.id)}"
+                                 class="img-fluid card-img zoom-img" alt="">
+                            <span
+                                    class="position-absolute top-2 start-0 badge bg-warning text-dark m-3 icon-rating">
+                                    <i class="fa-regular fa-star" style="color: #e13214;"></i>
+                                    4.9 đánh giá
+                                </span>
+                        </div>
+                        <div class="col-12 col-md-7">
+                            <div class="card-body card-info-du-thuyen p-0">
+                                <h5 class="card-title" th:text="${cruise.name}">Du thuyền Heritage Bình Chuẩn Cát
+                                    Bà</h5>
+                                <p class="card-text">
+                                    <small class="text-muted"
+                                           th:each="route : ${cruise.location}">
+                                        <i class="fas fa-location-dot me-1"></i>
+                                        <span th:text="${route.routeName}">Vịnh Hạ Long</span>
+                                    </small>
+                                </p>
+                                <p class="card-text">
+                                    <i class="fa-solid fa-ship"></i>
+                                    <span th:text="${cruise.material}">Hạ thủy 2019 - Tàu vỏ Kim loại - 20 phòng</span>
+                                </p>
+
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="badge bg-light text-dark"
+                                          th:each="tag : ${cruise.tags}"
+                                          th:text="${tag.name}">Có bể sục</span>
+                                </div>
+                                <hr class="separator">
+                                <div class="d-flex justify-content-between align-items-center mt-2">
+                                    <h4 class="mb-0" th:text="${cruise.price + 'đ / khách'}">3,675,000đ / khách</h4>
+                                    <button class="btn btn-search px-4 rounded-pill" type="button"
+                                            style="height: 38px;">Đặt ngay
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- phan trang -->
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="text-muted">Đang xem: <strong>5</strong> của <strong
+                                    th:text="${pageCruises.getTotalElements()}">64</strong></p>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <nav aria-label="Page navigation" th:if="${pageCruises.getTotalPages() > 1}">
+                                <ul class="pagination justify-content-end">
+
+                                    <!-- Nút Previous -->
+                                    <li class="page-item" th:classappend="${currentPage == 1? 'disabled ':''}">
+                                        <a class="page-link" th:href="|/search-cruise?page=${currentPage - 1}|"
+                                           aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+
+                                    <!-- Hiển thị trang đầu tiên -->
+                                    <li class="page-item" th:classappend="${currentPage == 1 ? 'active ' : ''}">
+                                        <a class="page-link" th:href="|/search-cruise?page=1|" th:text="1"></a>
+                                    </li>
+
+                                    <!-- Dấu "..." nếu khoảng cách giữa currentPage và 2 lớn hơn 2 -->
+                                    <li class="page-item disabled" th:if="${currentPage > 4}">
+                                        <span class="page-link">...</span>
+                                    </li>
+
+                                    <!-- Hiển thị các trang xung quanh currentPage (trước và sau 2 trang) -->
+                                    <li class="page-item"
+                                        th:each="numbers : ${#numbers.sequence(currentPage - 2, currentPage + 2)}"
+                                        th:if="${numbers > 1 and numbers < pageCruises.getTotalPages()}"
+                                        th:classappend="${currentPage == numbers? 'active ':''}">
+                                        <a class="page-link" th:href="|/search-cruise?page=${numbers}|"
+                                           th:text="${numbers}">1</a>
+                                    </li>
+
+                                    <!-- Dấu "..." nếu khoảng cách giữa currentPage và totalPages lớn hơn 2 -->
+                                    <li class="page-item disabled"
+                                        th:if="${currentPage < pageCruises.getTotalPages() - 3}">
+                                        <span class="page-link">...</span>
+                                    </li>
+
+                                    <!-- Hiển thị trang cuối cùng -->
+                                    <li class="page-item"
+                                        th:classappend="${currentPage == pageCruises.getTotalPages() ? 'active ' : ''}">
+                                        <a class="page-link"
+                                           th:href="|/search-cruise?page=${pageCruises.getTotalPages()}|"
+                                           th:text="${pageCruises.getTotalPages()}"></a>
+                                    </li>
+
+                                    <!-- Nút Next -->
+                                    <li class="page-item"
+                                        th:classappend="${currentPage == pageCruises.getTotalPages() ? 'disabled ':''}">
+                                        <a class="page-link" th:href="|/search-cruise?page=${currentPage + 1}|"
+                                           aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<!-- Bootstrap JavaScript Bundle (bao gồm cả Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<div id="footer"></div>
+<div th:insert="~{/fragment/footer}"></div>
+<script th:inline="javascript">
+    const cruise = [[${pageCruises}]];
+    console.log(cruise);
+    const cruiseImg = [[${cruiseImagesMap}]];
+    // console.log("cruiseImgMap",cruiseImg);
+
+</script>
+<script>
+</script>
+</body>
+
+</html>
